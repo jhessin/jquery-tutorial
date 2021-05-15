@@ -1,3 +1,5 @@
+/** @format */
+
 import $ from 'jquery';
 
 $(document).ready(() => {
@@ -5,6 +7,5 @@ $(document).ready(() => {
   //$('#content input:required').addClass('highlight');
   //$('#content input[placeholder=E-mail]').addClass('highlight');
   //$('#content input[placeholder*=Name]').addClass('highlight');
-  $('#content').find('hot').addClass('highlight')
+  $('#content').find('hot').addClass('highlight');
 });
-
