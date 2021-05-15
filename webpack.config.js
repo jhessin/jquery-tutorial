@@ -5,7 +5,11 @@ const config = {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './public',
+    contentBase: path.join(__dirname, 'public'),
+    compress: true,
+    host: '0.0.0.0',
+    watchContentBase: true,
+    overlay: true,
   },
   module: {
     rules: [

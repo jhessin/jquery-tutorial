@@ -30,6 +30,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     ],
     "fallbackPool": [
       [
+        "@types/jquery",
+        "npm:3.5.5"
+      ],
+      [
         "@types/lodash",
         "npm:4.14.169"
       ],
@@ -44,6 +48,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "@yarnpkg/pnpify",
         "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:2.0.0-rc.25"
+      ],
+      [
+        "jquery",
+        "npm:3.6.0"
       ],
       [
         "lodash",
@@ -85,10 +93,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["@types/jquery", "npm:3.5.5"],
             ["@types/lodash", "npm:4.14.169"],
             ["@types/node", "npm:14.0.13"],
             ["@types/webpack-dev-server", "npm:3.11.4"],
             ["@yarnpkg/pnpify", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:2.0.0-rc.25"],
+            ["jquery", "npm:3.6.0"],
             ["lodash", "npm:4.17.21"],
             ["ts-loader", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.2"],
             ["ts-node", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.1"],
@@ -338,6 +348,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/jquery", [
+        ["npm:3.5.5", {
+          "packageLocation": "./.yarn/cache/@types-jquery-npm-3.5.5-d23de0fc59-9e3c344515.zip/node_modules/@types/jquery/",
+          "packageDependencies": [
+            ["@types/jquery", "npm:3.5.5"],
+            ["@types/sizzle", "npm:2.3.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/json-schema", [
         ["npm:7.0.7", {
           "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.7-95fb8178d7-b9d2c509fa.zip/node_modules/@types/json-schema/",
@@ -435,6 +455,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/serve-static", "npm:1.13.9"],
             ["@types/mime", "npm:1.3.2"],
             ["@types/node", "npm:13.13.12"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/sizzle", [
+        ["npm:2.3.3", {
+          "packageLocation": "./.yarn/cache/@types-sizzle-npm-2.3.3-9403924950-8f019f9e1b.zip/node_modules/@types/sizzle/",
+          "packageDependencies": [
+            ["@types/sizzle", "npm:2.3.3"]
           ],
           "linkType": "HARD",
         }]
@@ -3672,15 +3701,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["jquery", [
+        ["npm:3.6.0", {
+          "packageLocation": "./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-a0a819022a.zip/node_modules/jquery/",
+          "packageDependencies": [
+            ["jquery", "npm:3.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["jquery-tutorial", [
         ["workspace:.", {
           "packageLocation": "./",
           "packageDependencies": [
             ["jquery-tutorial", "workspace:."],
+            ["@types/jquery", "npm:3.5.5"],
             ["@types/lodash", "npm:4.14.169"],
             ["@types/node", "npm:14.0.13"],
             ["@types/webpack-dev-server", "npm:3.11.4"],
             ["@yarnpkg/pnpify", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:2.0.0-rc.25"],
+            ["jquery", "npm:3.6.0"],
             ["lodash", "npm:4.17.21"],
             ["ts-loader", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.2"],
             ["ts-node", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.1"],

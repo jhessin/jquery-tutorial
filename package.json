@@ -7,10 +7,11 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "yarn tsc",
-    "start": "yarn node ./dist/file-example.js"
+    "build": "webpack",
+    "start": "webpack serve"
   },
   "devDependencies": {
+    "@types/jquery": "^3",
     "@types/lodash": "^4",
     "@types/node": "^14.0.13",
     "@types/webpack-dev-server": "^3",
@@ -24,6 +25,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21"
   }
 }
