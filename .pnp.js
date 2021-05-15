@@ -42,6 +42,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:14.0.13"
       ],
       [
+        "@types/prettier",
+        "npm:2.2.3"
+      ],
+      [
         "@types/webpack-dev-server",
         "npm:3.11.4"
       ],
@@ -56,6 +60,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       [
         "lodash",
         "npm:4.17.21"
+      ],
+      [
+        "prettier",
+        "npm:2.3.0"
       ],
       [
         "ts-loader",
@@ -96,10 +104,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jquery", "npm:3.5.5"],
             ["@types/lodash", "npm:4.14.169"],
             ["@types/node", "npm:14.0.13"],
+            ["@types/prettier", "npm:2.2.3"],
             ["@types/webpack-dev-server", "npm:3.11.4"],
             ["@yarnpkg/pnpify", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:2.0.0-rc.25"],
             ["jquery", "npm:3.6.0"],
             ["lodash", "npm:4.17.21"],
+            ["prettier", "npm:2.3.0"],
             ["ts-loader", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.2"],
             ["ts-node", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.1"],
             ["tslib", "npm:2.0.0"],
@@ -416,6 +426,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.0.13-12d0173e00-2f2be6f7f1.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:14.0.13"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/prettier", [
+        ["npm:2.2.3", {
+          "packageLocation": "./.yarn/cache/@types-prettier-npm-2.2.3-6036e6d94a-b7e80288f9.zip/node_modules/@types/prettier/",
+          "packageDependencies": [
+            ["@types/prettier", "npm:2.2.3"]
           ],
           "linkType": "HARD",
         }]
@@ -3718,10 +3737,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jquery", "npm:3.5.5"],
             ["@types/lodash", "npm:4.14.169"],
             ["@types/node", "npm:14.0.13"],
+            ["@types/prettier", "npm:2.2.3"],
             ["@types/webpack-dev-server", "npm:3.11.4"],
             ["@yarnpkg/pnpify", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:2.0.0-rc.25"],
             ["jquery", "npm:3.6.0"],
             ["lodash", "npm:4.17.21"],
+            ["prettier", "npm:2.3.0"],
             ["ts-loader", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.2"],
             ["ts-node", "virtual:b47db20699810d438aba7fba2f90c9375a2411ce23ef8f36696e0c09a33e7da1b8e9fc8f41369670214f7ab1ff2994f874260057de5b880829ea1ec3f46fa7d8#npm:9.1.1"],
             ["tslib", "npm:2.0.0"],
@@ -4937,6 +4958,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/posix-character-classes-npm-0.1.1-3e228a6e15-984f83c2d4.zip/node_modules/posix-character-classes/",
           "packageDependencies": [
             ["posix-character-classes", "npm:0.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["prettier", [
+        ["npm:2.3.0", {
+          "packageLocation": "./.yarn/cache/prettier-npm-2.3.0-29ef37e8b6-652640cc8b.zip/node_modules/prettier/",
+          "packageDependencies": [
+            ["prettier", "npm:2.3.0"]
           ],
           "linkType": "HARD",
         }]

@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <title>JQuery tutorial</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
     <div id="content">
-      <h4>Hot</h4>
-      <ul>
-        <li id="fire" class='non-solid'>Fire</li>
-        <li class='solid'>Lava</li>
-        <li class='non-solid'>Steam</li>
-      </ul>
-      <h4>Cold</h4>
-      <ul>
-        <li class='solid'>Snow</li>
-        <li class='solid'>Ice</li>
-        <li class='non-solid'>Rain</li>
-        <ul>
-          <li class='non-solid'>Heavy rain</li>
-          <li class='non-solid'>Light rain</li>
-        </ul>
-      </ul>
+      <div class="title">Hot</div>
+      <div class="hot">
+        <div class="item non-solid">Fire</div>
+        <div class="item solid">Lava</div>
+        <div class="item non-solid">Steam</div>
+      </div>
+      <br>
+      <div class="title">Cold</div>
+      <div class="cold">
+        <div class="item solid">Ice</div>
+        <div class="item non-solid">Snow</div>
+        <div class="item non-solid">Rain</div>
+      </div>
     </div>
     <script src="bundle.js"></script>
   </body>
-
 </html>
