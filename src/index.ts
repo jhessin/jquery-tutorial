@@ -9,5 +9,9 @@ $(document).ready(() => {
   //$('#content input[placeholder*=Name]').addClass('highlight');
   //$('#content').find('.hot').addClass('highlight');
   //$('#content').find('.hot').children().last().prev().addClass('highlight');
-  $('#content').find('.hot').children().first().next().addClass('highlight');
+  //$('#content').find('.hot').children().first().next().addClass('highlight');
+  //$('#snow').parent().prev().addClass('highlight');
+  //$('#snow').parent().parent().find('.title').addClass('highlight');
+  //$('#snow').closest('.temperature').addClass('highlight');
+  //$('#snow').closest('#content').addClass('highlight');
 });

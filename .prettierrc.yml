@@ -5,7 +5,7 @@ trailingComma: all
 bracketSpacing: true
 jsxBracketSameLine: true
 arrowParens: avoid
-parser: typescript
+#parser: typescript
 insertPragma: true
 proseWrap: always
 htmlWhitespaceSensitivity: css
