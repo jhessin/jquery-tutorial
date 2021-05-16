@@ -3,15 +3,10 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
-  //$('#content').html('<strong>Hello World</strong>');
-  //$('#content input:required').addClass('highlight');
-  //$('#content input[placeholder=E-mail]').addClass('highlight');
-  //$('#content input[placeholder*=Name]').addClass('highlight');
-  //$('#content').find('.hot').addClass('highlight');
-  //$('#content').find('.hot').children().last().prev().addClass('highlight');
-  //$('#content').find('.hot').children().first().next().addClass('highlight');
-  //$('#snow').parent().prev().addClass('highlight');
-  //$('#snow').parent().parent().find('.title').addClass('highlight');
-  //$('#snow').closest('.temperature').addClass('highlight');
-  //$('#snow').closest('#content').addClass('highlight');
+  //$('.box').on('click', function () {
+  //$(this).toggleClass('highlight');
+  //});
+  $('.box').on('click', '.box-button', event => {
+    $(event.toElement).parent().toggleClass('highlight');
+  });
 });
