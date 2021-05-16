@@ -1,3 +1,5 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,13 +11,12 @@
 
   <body>
     <div id="container">
-      <select id="select-menu">
-        <option value='' data-price=''>Select a race</option>
-        <option value='5' data-price='19'>5k</option>
-        <option value='10' data-price='29'>10k</option>
-        <option value='21' data-price='49'>Half-marathon</option>
-        <option value='42' data-price='59'>Marathon</option>
-      </select>
+      <input
+        type="text"
+        name="name"
+        id="input-name"
+        placeholder="Tell me your name!"
+      />
       <div id="feedback-message"></div>
     </div>
     <script src="bundle.js"></script>
