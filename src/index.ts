@@ -2,15 +2,22 @@
 
 import $ from 'jquery';
 
+// Format for items to add.
 type Item = {
   name: string;
-  description: string;
-  price: number;
-  moreInfo: string;
+  description?: string;
+  price?: number;
+  moreInfo?: string;
 };
 
+// Manage adding items with this function
 function addItem(data: Item) {
-  const { name, description, price, moreInfo } = data;
+  const {
+    name,
+    description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium aspernatur error et sunt exercitationem harum dignissimos corporis magni, assumenda earum tenetur voluptas beatae quidem excepturi pariatur impedit rerum! Accusamus, illo?',
+    price = 499,
+    moreInfo = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+  } = data;
 
   let html = `
       <div class="item">
@@ -27,31 +34,26 @@ function addItem(data: Item) {
   $('#container').prepend(html);
 }
 
+// Wait for the page to load...
 $(document).ready(() => {
-  $('#button-create-item').on('click', function () {
-    const name = $('#input-create-item').val();
+  // listen for the user to click the 'add' button
+  $('#create-item-form').on('submit', function (event) {
+    event.preventDefault();
+    const name: string = $('#input-create-item').val().toString();
     $('#input-create-item').val('');
 
-    let html = `
-      <div class="item">
-        <div class="name">${name}</div>
-        <img src="beach.jpg" alt="Beach">
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium aspernatur error et sunt exercitationem harum dignissimos corporis magni, assumenda earum tenetur voluptas beatae quidem excepturi pariatur impedit rerum! Accusamus, illo?</div>
-        <div class="price">$499</div>
-        <button class='item-add'>Add to cart</button>
-        <button class='item-remove'>Remove</button><br>
-        <a href="#" class='more-info-link'>More info</a>
-        <div class="more-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-      </div>
-    `;
-
-    $('#container').prepend(html);
+    // add the item
+    addItem({
+      name,
+    });
   });
 
+  // Remove items when the remove button is clicked
   $('#container').on('click', '.item-remove', function () {
     $(this).parent().remove();
   });
 
+  // Toggle more-info
   $('#container').on('click', '.more-info-link', function (event) {
     event.preventDefault();
     $(this).parent().find('.more-info').slideToggle('fast');
