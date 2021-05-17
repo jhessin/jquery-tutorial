@@ -3,12 +3,12 @@
 const path = require('path');
 
 const config = {
-  entry: './src/index.ts',
+  entry: './ts/index.ts',
   mode: 'development',
   target: 'web',
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, '.'),
     compress: true,
     host: '0.0.0.0',
     watchContentBase: true,

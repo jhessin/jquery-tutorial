@@ -26,7 +26,7 @@ function addItem(data: Item) {
   let html = `
       <div class="item" data-id="${id}">
         <div class="name">${name}</div>
-        <img src="beach.jpg" alt="Beach">
+        <img src="assets/beach.jpg" alt="Beach">
         <div class="description">${description}</div>
         <div class="price" data-price="${price}">$${price}</div>
         <button class='item-add'>Add to cart</button>
@@ -79,7 +79,7 @@ $(document).ready(() => {
   });
 
   // add prebuilt items
-  $.ajax('item.json', {
+  $.ajax('data/item.json', {
     dataType: 'json',
     contentType: 'application/json',
     cache: false,
@@ -99,7 +99,7 @@ $(document).ready(() => {
 
   $('#container').on('click', '.item-add', function () {
     const id = $(this).parent().data('id');
-    $.ajax('addToCart.json', {
+    $.ajax('data/addToCart.json', {
       //type: 'post',
       dataType: 'json',
       contentType: 'application/json',
