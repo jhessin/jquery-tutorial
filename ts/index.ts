@@ -100,7 +100,7 @@ $(document).ready(() => {
   $('#container').on('click', '.item-add', function () {
     const id = $(this).parent().data('id');
     $.ajax('data/addToCart.json', {
-      //type: 'post',
+      type: 'post',
       dataType: 'json',
       contentType: 'application/json',
       data: {
@@ -114,5 +114,33 @@ $(document).ready(() => {
         $('#cart-container').text(`$${total}`);
       }
     });
+  });
+
+  $('#newsletter-checkbox').on('change', function () {
+    if ($(this).is(':checked')) {
+      $('#newsletter-frequency').slideDown('fast');
+    } else {
+      $('#newsletter-frequency').slideUp('fast');
+    }
+  });
+  $('#newsletter-checkbox').trigger('change');
+
+  $('#cart-form').on('submit', function (event) {
+    event.preventDefault();
+
+    const data = {
+      form: $(this).serialize(),
+      price: total,
+    };
+    $.ajax($(this).attr('action'), {
+      type: 'post',
+      data,
+    })
+      .done(function (res) {
+        $('#feedback-message').text(res.message);
+      })
+      .fail(function () {
+        $('#feedback-message').text(arguments.toString());
+      });
   });
 });

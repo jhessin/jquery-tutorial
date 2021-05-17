@@ -8,6 +8,11 @@ const config = {
   target: 'web',
   devtool: 'inline-source-map',
   devServer: {
+    setup(app) {
+      app.post('*', (req, res) => {
+        res.redirect(req.originalUrl);
+      });
+    },
     contentBase: path.join(__dirname, '.'),
     compress: true,
     host: '0.0.0.0',

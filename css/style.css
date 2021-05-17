@@ -20,6 +20,10 @@ body {
   flex-wrap: wrap;
 }
 
+#newsletter-frequency {
+  display: none;
+}
+
 .item {
   width: 200px;
   background-color: #ddd;

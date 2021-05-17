@@ -10,8 +10,32 @@
   </head>
 
   <body>
-    <div id="cart-container">
-      $0
+    <div id="cart-container">$0</div>
+    <div id="user-data">
+      <form id="cart-form" method="POST" action="data/cartSubmit.json">
+        <label for="Name">Name</label>
+        <input type="text" name="Name" id="" />
+        <br />
+        <label for="Email">Email</label>
+        <input type="email" name="Email" id="" />
+        <br />
+        <label for="Newsletter">Newsletter?</label>
+        <input
+          type="checkbox"
+          name="Newsletter"
+          id="newsletter-checkbox"
+          checked
+        />
+        <br />
+        <select name="Newsletter-Frequency" id="newsletter-frequency">
+          <option value="-">-</option>
+          <option value="weekly" selected>weekly</option>
+          <option value="monthly">monthly</option>
+        </select>
+        <br />
+        <button id="submit-cart" type="submit">Submit</button>
+      </form>
+      <div id="feedback-message"></div>
     </div>
     <div id="container"></div>
     <script src="bundle.js"></script>
