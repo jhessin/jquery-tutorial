@@ -2,8 +2,11 @@
 
 import $ from 'jquery';
 
+let total = 0;
+
 // Format for items to add.
 type Item = {
+  id?: number;
   name: string;
   description?: string;
   price?: number;
@@ -13,6 +16,7 @@ type Item = {
 // Manage adding items with this function
 function addItem(data: Item) {
   const {
+    id = 0,
     name,
     description = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium aspernatur error et sunt exercitationem harum dignissimos corporis magni, assumenda earum tenetur voluptas beatae quidem excepturi pariatur impedit rerum! Accusamus, illo?',
     price = 499,
@@ -20,11 +24,11 @@ function addItem(data: Item) {
   } = data;
 
   let html = `
-      <div class="item">
+      <div class="item" data-id="${id}">
         <div class="name">${name}</div>
         <img src="beach.jpg" alt="Beach">
         <div class="description">${description}</div>
-        <div class="price">$${price}</div>
+        <div class="price" data-price="${price}">$${price}</div>
         <button class='item-add'>Add to cart</button>
         <button class='item-remove'>Remove</button><br>
         <a href="#" class='more-info-link'>More info</a>
@@ -92,4 +96,23 @@ $(document).ready(() => {
     .always(function () {
       //console.log(arguments);
     });
+
+  $('#container').on('click', '.item-add', function () {
+    const id = $(this).parent().data('id');
+    $.ajax('addToCart.json', {
+      //type: 'post',
+      dataType: 'json',
+      contentType: 'application/json',
+      data: {
+        id,
+      },
+    }).done(function (res) {
+      if (res.message === 'success') {
+        const { price } = res;
+        total += price;
+
+        $('#cart-container').text(`$${total}`);
+      }
+    });
+  });
 });
